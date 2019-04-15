@@ -25,15 +25,15 @@ void main(void)
    uchar tmp=0x01;
    while (1)
    {
-		 P0=~(1<<7);
-		 P2=0;
-//      P0=(~tmp);
+		// P0=~(1<<7);
+		// P2=0;
+      P0=(~tmp);
 //			P2=(~tmp);
-//      delay();
-//      tmp<<=1;
-//      if(tmp==0x00)
-//      {
-//				tmp=0x01;
-//      }
+      delay();
+      tmp<<=1;
+      if(tmp==0)
+      {
+				tmp=1;
+      }
    }
  }
