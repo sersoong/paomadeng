@@ -23,17 +23,25 @@ void main(void)
  { 
    // Write your code here
    uchar tmp=0x01;
+	 P0=85;
    while (1)
    {
-		// P0=~(1<<7);
-		// P2=0;
-      P0=(~tmp);
+		 delay();
+		 if(P0==85)
+		 {
+			 P0=170;
+		 }
+		 else
+		 {
+			 P0=85;
+		 }
+     //P0=(~tmp);
 //			P2=(~tmp);
-      delay();
-      tmp<<=1;
-      if(tmp==0)
-      {
-				tmp=1;
-      }
+      //delay();
+      //tmp<<=1;
+      //if(tmp==0)
+      //{
+			//	tmp=1;
+      //}
    }
  }
